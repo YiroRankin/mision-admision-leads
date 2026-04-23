@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Misión Admisión Leads – MVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Misión Admisión</p>
+          <h1>Dashboard comercial MVP</h1>
+          <p class="subtitle">
+            Vista inicial para seguimiento de metas, campus y fechas de inicio.
+          </p>
+        </div>
+        <div class="meta-card">
+          <div class="meta-row">
+            <span class="meta-label">Ciclo</span>
+            <span id="meta-cycle" class="meta-value">—</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Alcance</span>
+            <span id="meta-scope" class="meta-value">—</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Actualizado</span>
+            <span id="meta-updated" class="meta-value">—</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="toolbar">
+        <div class="field">
+          <label for="temario-filter">Temario</label>
+          <select id="temario-filter"></select>
+        </div>
+      </section>
+
+      <section>
+        <h2>Resumen ejecutivo</h2>
+        <div id="kpi-grid" class="kpi-grid"></div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Avance por campus</h2>
+          <p id="campus-count" class="section-note"></p>
+        </div>
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Campus</th>
+                <th>Temario</th>
+                <th>Meta</th>
+                <th>Reales</th>
+                <th>Gap</th>
+                <th>Cumplimiento</th>
+                <th>Semáforo</th>
+              </tr>
+            </thead>
+            <tbody id="campus-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Avance por fecha de inicio</h2>
+          <p id="starts-count" class="section-note"></p>
+        </div>
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Inicio</th>
+                <th>Campus</th>
+                <th>Temario</th>
+                <th>Meta</th>
+                <th>Reales</th>
+                <th>Gap</th>
+                <th>Cumplimiento</th>
+                <th>Semáforo</th>
+              </tr>
+            </thead>
+            <tbody id="starts-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="footer-note">
+        <p>
+          Esta versión lee datos desde <code>data.sample.js</code>. El siguiente paso es conectar una salida JSON proveniente de Google Sheets o Apps Script.
+        </p>
+      </section>
+    </div>
+
+    <script src="./data.sample.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
